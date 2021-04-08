@@ -1,4 +1,4 @@
-import { TweetBox } from "../../components";
+import { Post, TweetBox } from "../../components";
 import {
     Container,
     FeedHeader,
@@ -12,6 +12,7 @@ const FeedContainer = () => {
                 <FeedTitle>Home</FeedTitle>
             </FeedHeader>
             <TweetBox />
+            <Post />
         </Container>
     );
 };
