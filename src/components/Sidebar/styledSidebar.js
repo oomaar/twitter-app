@@ -3,13 +3,12 @@ import styled from "styled-components";
 export const Container = styled.div`
     border-right: 1px solid rgb(136, 153, 166);
     flex: 0.3;
-    margin-top: 20px;
     padding: 0 20px;
 `;
 
 export const Logo = styled.img`
     width: 60px;
-    margin: 0 0 20px 20px;
+    margin: 20px 0 20px 20px;
 `;
 
 export const SideContainer = styled.div`
