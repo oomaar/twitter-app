@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -149,9 +150,9 @@ export const ButtonsContainer = styled.div`
     }
 `;
 
-export const Button = styled.button`
+export const Button = styled(Link)`
     background: transparent;
-    padding: 5px;
+    padding: 10px;
     border: 2px solid #1da1f2;
     color: #1da1f2;
     font-size: 14px;
@@ -162,6 +163,8 @@ export const Button = styled.button`
     height: 50px;
     margin: 10px 0;
     font-weight: bold;
+    text-decoration: none;
+    text-align: center;
 
     :hover {
         background: #162d40;

@@ -51,8 +51,8 @@ const Feature = () => {
                         <SubTitle>Join Twitter today.</SubTitle>
                     </TitleContainer>
                     <ButtonsContainer>
-                        <Button className="signup__button">Sign up</Button>
-                        <Button>Log in</Button>
+                        <Button to="/signup" className="signup__button">Sign up</Button>
+                        <Button to="/login">Log in</Button>
                     </ButtonsContainer>
                 </Brand>
             </SubContainer>
