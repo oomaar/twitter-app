@@ -12,6 +12,12 @@ export const TweetForm = styled.form`
 export const SubContainer = styled.div`
     padding: 10px;
     display: flex;
+    flex-direction: column;
+`;
+
+export const TweetContainer = styled.div`
+    padding: 10px;
+    display: flex;
 `;
 
 export const Text = styled.textarea`
@@ -19,6 +25,15 @@ export const Text = styled.textarea`
     margin-left: 20px;
     font-size: 20px;
     border: none;
+    background: transparent;
+    color: #fff;
+`;
+
+export const ImageInput = styled.input`
+    flex: 1;
+    margin-left: 20px;
+    font-size: 20px;
+    border: 1px solid rgb(136, 153, 166);
     background: transparent;
     color: #fff;
 `;

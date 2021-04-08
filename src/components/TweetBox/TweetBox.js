@@ -8,28 +8,62 @@ import {
     Container,
     TweetForm,
     SubContainer,
+    TweetContainer,
     Text,
+    ImageInput,
     IconsContainer,
     Icons,
     Icon,
     Button,
 } from "./styledTweetBox";
 import setTextareaHeight from "../../utils/setTextareaHeight";
+import { useState } from 'react';
+import { db } from '../../lib/firebase';
 
 const TweetBox = () => {
+    const [tweetMessage, setTweetMessage] = useState('');
+    const [tweetImage, setTweetImage] = useState('');
+
+    const sendTweet = e => {
+        e.preventDefault();
+
+        db.collection('posts').add({
+            displayName: "Omar Hassan",
+            userName: "omaar_5",
+            verified: true,
+            text: tweetMessage,
+            image: tweetImage,
+            avatar: "/images/pharaohdev.png",
+        });
+    };
+
     return (
         <Container>
             <TweetForm>
                 <SubContainer>
-                    <Avatar style={{ cursor: 'pointer' }} />
-                    <Text
-                        id="tweetbox-textArea"
-                        placeholder="What's happening?"
-                        rows="2"
-                        cols="2"
-                        onChange={(event) => setTextareaHeight(event, "100px")}
-                    >
-                    </Text>
+                    <TweetContainer>
+                        <Avatar style={{ cursor: 'pointer' }} />
+                        <Text
+                            id="tweetbox-textArea"
+                            placeholder="What's happening?"
+                            rows="2"
+                            cols="2"
+                            value={tweetMessage}
+                            onChange={event => (
+                                setTweetMessage(event.target.value) +
+                                setTextareaHeight(event, "100px") +
+                                console.log("Just Testing The On Change Function For Fun !!!")
+                            )}
+                        >
+                        </Text>
+                    </TweetContainer>
+                    <ImageInput
+                        className="tweetBox__imageInput"
+                        placeholder="Optional: Paste an image URL"
+                        type="text"
+                        value={tweetImage}
+                        onChange={event => setTweetImage(event.target.value)}
+                    />
                 </SubContainer>
                 <IconsContainer>
                     <Icons>
@@ -49,7 +83,7 @@ const TweetBox = () => {
                             <EventNoteIcon />
                         </Icon>
                     </Icons>
-                    <Button type="submit">Tweet</Button>
+                    <Button onClick={sendTweet} type="submit">Tweet</Button>
                 </IconsContainer>
             </TweetForm>
         </Container>
