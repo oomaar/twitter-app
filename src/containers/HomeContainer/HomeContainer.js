@@ -1,13 +1,17 @@
-import { BackGround, Feature } from "../../components";
+import { BackGround, Feature, Footer } from "../../components";
 import {
     Container,
+    SubContainer,
 } from "./styledHomeContainer";
 
 const HomeContainer = () => {
     return (
         <Container>
-            <BackGround />
-            <Feature />
+            <SubContainer>
+                <BackGround />
+                <Feature />
+            </SubContainer>
+            <Footer />
         </Container>
     );
 };

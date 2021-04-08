@@ -114,7 +114,6 @@ export const Brand = styled.div`
 
 export const Logo = styled.img`
     width: 50px;
-    margin: 0 0 50px;
 `;
 
 export const TitleContainer = styled.div``;
