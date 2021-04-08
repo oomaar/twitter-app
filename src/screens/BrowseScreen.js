@@ -1,8 +1,10 @@
+import { BrowseContainer } from "../containers";
+
 const BrowseScreen = () => {
     return (
-        <h1>
-            Browse Screen
-        </h1>
+        <>
+            <BrowseContainer />
+        </>
     );
 };
 
