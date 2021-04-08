@@ -1,3 +1,4 @@
+import { FeedContainer } from "..";
 import { Sidebar } from "../../components";
 import {
     Container,
@@ -9,6 +10,7 @@ const BrowseContainer = () => {
             {/* Sidebar */}
             <Sidebar />
             {/* Feed */}
+            <FeedContainer />
             {/* Widgets */}
         </Container>
     );
