@@ -1,8 +1,10 @@
+import { HomeContainer } from "./containers"
+
 const App = () => {
   return (
-    <h1>
-      Twitter App
-    </h1>
+    <div>
+      <HomeContainer />
+    </div>
   );
 };
 
