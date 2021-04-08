@@ -1,5 +1,5 @@
 import { FeedContainer } from "..";
-import { Sidebar } from "../../components";
+import { Sidebar, Widgets } from "../../components";
 import {
     Container,
 } from "./styledBrowseContainer";
@@ -7,11 +7,9 @@ import {
 const BrowseContainer = () => {
     return (
         <Container>
-            {/* Sidebar */}
             <Sidebar />
-            {/* Feed */}
             <FeedContainer />
-            {/* Widgets */}
+            <Widgets />
         </Container>
     );
 };

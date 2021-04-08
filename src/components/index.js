@@ -6,3 +6,4 @@ export { default as LoginForm } from './LoginForm/LoginForm';
 export { default as Sidebar } from './Sidebar/Sidebar';
 export { default as TweetBox } from './TweetBox/TweetBox';
 export { default as Post } from './Post/Post';
+export { default as Widgets } from './Widgets/Widgets';
