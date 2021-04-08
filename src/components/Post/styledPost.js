@@ -8,10 +8,19 @@ export const Container = styled.div`
     padding-bottom: 10px;
     max-width: 600px;
     max-height: 500px;
+
+    @media (max-width: 750px) {
+        max-width: 750px;
+        width: 100%;
+    }
 `;
 
 export const AvatarContainer = styled.div`
     padding: 20px;
+
+    @media (max-width: 750px) {
+        padding: 5px;
+    }
 `;
 
 export const SubContainer = styled.div`
@@ -22,6 +31,10 @@ export const SubContainer = styled.div`
 export const PostContainer = styled.div`
     flex: 1;
     padding: 10px;
+
+    @media (max-width: 750px) {
+        padding: 5px;
+    }
 `;
 
 export const PostHeader = styled.div`
@@ -76,6 +89,10 @@ export const PostFooter = styled.div`
     margin-top: 10px;
     width: 100%;
     padding: 0 20px;
+
+    @media (max-width: 750px) {
+        padding: 0 5px;
+    }
 `;
 
 export const IconsContainer = styled.div`

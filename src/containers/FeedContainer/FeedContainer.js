@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { Post, TweetBox } from "../../components";
-import { db } from "../../lib/firebase";
+import { auth, db } from "../../lib/firebase";
 import {
     Container,
     FeedHeader,
     FeedTitle,
+    Button,
 } from "./styledFeedContainer";
 
 const FeedContainer = () => {
@@ -18,10 +19,15 @@ const FeedContainer = () => {
             ));
     }, []);
 
+    const handleLogout = () => {
+        auth.signOut();
+    };
+
     return (
         <Container>
             <FeedHeader>
                 <FeedTitle>Home</FeedTitle>
+                <Button onClick={handleLogout}>Log out</Button>
             </FeedHeader>
             <TweetBox />
             {posts.map(post => (

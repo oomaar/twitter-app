@@ -4,6 +4,10 @@ export const Container = styled.div`
     border-right: 1px solid rgb(136, 153, 166);
     flex: 0.3;
     padding: 0 20px;
+
+    @media (max-width: 750px) {
+        display: none;
+    }
 `;
 
 export const Logo = styled.img`

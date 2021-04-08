@@ -11,8 +11,8 @@ export const Container = styled.footer`
         height: 19vh;
     } */
 
-    @media (max-width: 499px) {
-        height: 15vh;
+    @media (max-width: 750px) {
+        display: none;
     }
 `;
 

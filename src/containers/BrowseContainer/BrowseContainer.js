@@ -1,5 +1,5 @@
 import { FeedContainer } from "..";
-import { Sidebar, Widgets } from "../../components";
+import { Sidebar, Widgets, BrowseFooter } from "../../components";
 import {
     Container,
 } from "./styledBrowseContainer";
@@ -10,6 +10,7 @@ const BrowseContainer = () => {
             <Sidebar />
             <FeedContainer />
             <Widgets />
+            <BrowseFooter />
         </Container>
     );
 };
