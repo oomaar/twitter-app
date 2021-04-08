@@ -36,17 +36,17 @@ const Post = ({ displayName, userName, verified, text, image, avatar }) => {
                         <PostHeaderText>
                             <PostTitle>
                                 {displayName}
-                        <PostVer>
-                                    {verified} && <VerifiedUserRounded className="badge" /> @username
-                        </PostVer>
+                                <PostVer>
+                                    {verified && <VerifiedUserRounded className="badge" />} @{userName}
+                                </PostVer>
                             </PostTitle>
                         </PostHeaderText>
                         <PostDescription>
                             <PostText>{text}</PostText>
                         </PostDescription>
                     </PostHeader>
-                    <PostImageContainer>
-                        <PostImage src={image} alt="image" />
+                    <PostImageContainer src={image}>
+                        {/* <PostImage src={image} alt="image" /> */}
                     </PostImageContainer>
                 </PostContainer>
             </SubContainer>

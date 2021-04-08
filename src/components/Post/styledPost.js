@@ -16,6 +16,7 @@ export const AvatarContainer = styled.div`
 
 export const SubContainer = styled.div`
     display: flex;
+    width: 100%;
 `;
 
 export const PostContainer = styled.div`
@@ -23,7 +24,8 @@ export const PostContainer = styled.div`
     padding: 10px;
 `;
 
-export const PostHeader = styled.div``;
+export const PostHeader = styled.div`
+`;
 
 export const PostHeaderText = styled.div``;
 
@@ -36,9 +38,10 @@ export const PostVer = styled.span`
     font-weight: 600;
     font-size: 12px;
     color: #808080;
+    margin-left: 5px;
 
     .badge {
-        font-size: 14px !important;
+        font-size: 14px;
         color: #1da1f2;
     }
 `;
@@ -56,6 +59,7 @@ export const PostText = styled.p`
 export const PostImageContainer = styled.div`
     width: 100%;
     height: 200px;
+    background: url(${({ src }) => (src ? `${src}` : ' ')});
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
