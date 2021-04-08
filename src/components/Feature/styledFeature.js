@@ -9,6 +9,7 @@ export const Container = styled.div`
 export const HomeForm = styled.form`
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 
     @media (max-width: 1000px) {
         display: none;
